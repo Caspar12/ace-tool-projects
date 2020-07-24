@@ -115,13 +115,13 @@ ace:
             #数据库连接配置
             data-source:
               #驱动连接的URL
-              url: jdbc:mysql://localhost:3306/ace_account?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8
+              url: jdbc:mysql://172.1.1.100:3306/ace_user_base?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
               #驱动名称
               driverName: com.mysql.cj.jdbc.Driver
               #数据库连接用户名
               username: root
               #数据库连接密码
-              password: root
+              password: 123456
             #包配置 ace.tool.code.auto.generator.config.AcePackageConfig
             package:              
               #父包名。如果为空，将下面子包名必须写全部， 否则就只需写子包名              
@@ -129,19 +129,19 @@ ace:
               #父包模块名
               #moduleName: null
               #Entity包名
-              entity: ace.account.dal.api.db.entity
+              entity: ace.user.base.define.dao.entity
               #Service包名
-              service: ace.account.dal.api.db.service
+              service: ace.user.base.api.web.dao
               #Service Impl包名
-              serviceImpl: ace.account.dal.api.db.service.impl
+              serviceImpl: ace.user.base.api.web.dao.impl
               #Mapper包名
-              mapper: ace.account.dal.api.db.mapper
+              mapper: ace.user.base.api.web.dao.mapper
               #Mapper XML包名
-              xml: ace.account.dal.api.db.mapper.xml
+              xml: ace.user.base.api.web.dao.mapper.xml
               #Controller包名
-              controller: ace.account.dal.api.service.impl
+              controller: ace.user.base.api.web.dao.controller.impl
               #Controller接口包名
-              controllerService: ace.account.dal.api.service
+              controllerService: ace.user.base.api.web.dao.controller
             #模板配置 ace.tool.code.auto.generator.config.AceTemplateConfig
             template:
               #entity:
