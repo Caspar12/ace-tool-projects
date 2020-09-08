@@ -31,8 +31,8 @@ ace:
               #entityName: '%s'
               mapperName: '%sMapper'
               xmlName: '%sMapper'
-              serviceName: '%sService'
-              serviceImplName: '%sServiceImpl'
+              serviceName: '%sDbService'
+              serviceImplName: '%sDbServiceImpl'
               controllerName: '%sController'
               controllerServiceName: '%sService'
               # 指定生成的主键的ID类型 com.baomidou.mybatisplus.annotation.IdType
@@ -59,11 +59,11 @@ ace:
               #自定义基础的Entity类，公共字段
               #superEntityColumns
               #自定义继承的Mapper类全称，带包名
-              superMapperClass: com.baomidou.mybatisplus.core.mapper.BaseMapper
+              superMapperClass: ace.fw.mybatis.plus.extension.mapper.AceBaseMapper
               #自定义继承的Service类全称，带包名
-              superServiceClass: com.baomidou.mybatisplus.extension.service.IService
+              superServiceClass: ace.fw.restful.base.api.plugin.mybatisplus.MybatisPlusDbService
               #自定义继承的ServiceImpl类全称，带包名
-              superServiceImplClass: com.baomidou.mybatisplus.extension.service.impl.ServiceImpl
+              superServiceImplClass: ace.fw.restful.base.api.plugin.mybatisplus.impl.MybatisPlusDbServiceImpl
               #自定义继承的Controller类全称，带包名
               #superControllerClass:
               #需要包含的表名（与exclude二选一配置）
@@ -101,7 +101,7 @@ ace:
               #是否生成实体时，生成字段注解
               entityTableFieldAnnotationEnable: false
               #乐观锁属性名称
-              versionFieldName: row_version
+              versionFieldName: row_version,update_time
               #逻辑删除属性名称
               logicDeleteFieldName: delete_flag
               #表填充字段
@@ -115,7 +115,7 @@ ace:
             #数据库连接配置
             data-source:
               #驱动连接的URL
-              url: jdbc:mysql://172.1.1.100:3306/ace_user_base?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
+              url: jdbc:mysql://localhost:3306/ace_common_base?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8&allowPublicKeyRetrieval=true
               #驱动名称
               driverName: com.mysql.cj.jdbc.Driver
               #数据库连接用户名
